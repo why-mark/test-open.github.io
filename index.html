@@ -5,7 +5,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
-    <title>出校通行证(2分钟内有效)</title>
+    <title id="t">出校通行证(2分钟内有效)</title>
     <link rel="stylesheet" href="./出校通行证(2分钟内有效)_files/weui.min.css">
     <script type="text/javascript" src="./出校通行证(2分钟内有效)_files/running.js" charset="UTF-8"></script>
     <style>
@@ -21,9 +21,25 @@
             border: none;
         }
     </style>
+                        <script type="text/javascript">
+		function changed(){
+var a=document.getElementById("i2");
+var b=document.getElementById("i1");
+var c=document.getElementById("t");
+var d=document.getElementById("w");
+if (a.style.display=="none"){
+a.style.display="";
+b.style.display="none";
+c.innerText="返校通行证(2分钟内有效)";
+d.innerText="学生返校通行证"
+}
+}
+                        </script>
     <div id="bodyDiv">
-        <p style="text-align: center; background: rgb(0, 169, 157);" id="imgBg"><br><img src="./出校通行证(2分钟内有效)_files/pass2.png" alt=""><br><br></p>
-        <div class="weui-cells__title">学生出校通行证</div>
+        <p style="text-align: center; background: rgb(0, 169, 157);" id="imgBg"><br><img onclick="changed()" id="i1" src="./出校通行证(2分钟内有效)_files/pass2.png" alt="">
+              <img id="i2"  src="./出校通行证(2分钟内有效)_files/pass1.png" style="display:none;" alt="">
+        <br><br></p>
+        <div id="w" class="weui-cells__title">学生出校通行证</div>
         <div class="weui-cells">
             <div class="weui-cell  weui-cell_example">
                 <div class="weui-cell__hd"><img src="./出校通行证(2分钟内有效)_files/person.png" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
