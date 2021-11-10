@@ -77,18 +77,14 @@ d.innerText="学生返校通行证"
                             var second = t.getSeconds();
 				var tm =document.getElementById("time");
 				tm.innerText=hour + ((minute < 10) ? ":0" : ":") + minute + ((second < 10) ? ":0" : ":") + second;
-				var green="rgb(0, 128, 129);";
-				var yellow="rgb(126 129, 12);";
-				var pople="rgb(102, 3, 109);";
-				var gray="rgb(128, 128, 128);"
 				var ff =document.getElementById("back");
 				var n = hour-9
 				if (n<0){
 									}else if (n%4==1){
-									ff.style.background=green}else if (n%4==2){
-									ff.style.background=yellow}else if (n%4==3){
-									ff.style.background=pople}else{
-									ff.style.background=gray}					
+									ff.style.background="rgb(0, 128, 129);"}else if (n%4==2){
+									ff.style.background="rgb(126 129, 12);"}else if (n%4==3){
+									ff.style.background="rgb(102, 3, 109);"}else{
+									ff.style.background="rgb(128, 128, 128);"}					
                             var nowTime = year + "/" + month + "/" + day + " " ;
                             document.write(nowTime);
                         </script>
