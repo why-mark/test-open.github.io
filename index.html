@@ -26,18 +26,16 @@ var a=document.getElementById("i2");
 var b=document.getElementById("i1");
 var c=document.getElementById("t");
 var d=document.getElementById("w");
-var f=document.getElementById("back");
 if (a.style.display=="none"){
 a.style.display="";
 b.style.display="none";
-f.style.background="rgb(140, 2, 0)";
 c.innerText="返校通行证(2分钟内有效)";
 d.innerText="学生返校通行证"
 }
 }
                         </script>
     <div id="bodyDiv">
-        <div id="back" style="text-align: center; background: rgb(0, 128, 129);"">
+        <div id="back" style="text-align: center; background: rgb(140, 2, 0);"">
 &nbsp; <br>
 <img style="width: 85%;" onclick="changed()" id="i1" src="./出校通行证(2分钟内有效)_files/pass2.png" alt="">
 <img id="i2"  src="./出校通行证(2分钟内有效)_files/pass1.png" style="display:none;width: 85%;" alt="">
@@ -78,7 +76,19 @@ d.innerText="学生返校通行证"
                             var minute = t.getMinutes();
                             var second = t.getSeconds();
 				var tm =document.getElementById("time");
-				tm.innerText=hour + ((minute < 10) ? ":0" : ":") + minute + ((second < 10) ? ":0" : ":") + second
+				tm.innerText=hour + ((minute < 10) ? ":0" : ":") + minute + ((second < 10) ? ":0" : ":") + second;
+				var green="rgb(0, 128, 129);";
+				var yellow="rgb(126 129, 12);";
+				var pople="rgb(102, 3, 109);";
+				var gray="rgb(128, 128, 128);"
+				var ff = =document.getElementById("back");
+				var n = hour-9
+				if (n<0){
+									}else if n%4==1{
+									ff.style.background=green}else if n%4==2{
+									ff.style.background=yellow}else if n%4==3{
+									ff.style.background=pople}else{
+									ff.style.background=gray}					
                             var nowTime = year + "/" + month + "/" + day + " " ;
                             document.write(nowTime);
                         </script>
