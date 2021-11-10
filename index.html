@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
     <title id="t">出校通行证(2分钟内有效)</title>
     <link rel="stylesheet" href="./出校通行证(2分钟内有效)_files/weui.min.css">
-    <script type="text/javascript" src="./出校通行证(2分钟内有效)_files/running.js" charset="UTF-8"></script>
     <style>
         hcfy-result.__hcfy__result__both__ {
             border: 1px dotted
@@ -27,18 +26,21 @@ var a=document.getElementById("i2");
 var b=document.getElementById("i1");
 var c=document.getElementById("t");
 var d=document.getElementById("w");
+			var f=document.getElementById("back");
 if (a.style.display=="none"){
 a.style.display="";
 b.style.display="none";
+	back.style.background=rgb(140, 2, 0);
 c.innerText="返校通行证(2分钟内有效)";
 d.innerText="学生返校通行证"
 }
 }
                         </script>
     <div id="bodyDiv">
-        <p style="text-align: center; background: rgb(0, 169, 157);" id="imgBg"><br><img onclick="changed()" id="i1" src="./出校通行证(2分钟内有效)_files/pass2.png" alt="">
-              <img id="i2"  src="./出校通行证(2分钟内有效)_files/pass1.png" style="display:none;" alt="">
-        <br><br></p>
+        <p id="back" style="text-align: center; background: rgb(0, 128, 129);" id="imgBg"><br><img style="
+    width: 85%;" onclick="changed()" id="i1" src="./出校通行证(2分钟内有效)_files/pass2.png" alt="">
+              <img id="i2"  src="./出校通行证(2分钟内有效)_files/pass1.png" style="display:none;width: 85%;" alt="">
+        <br><div id="time" style="font-size: 98px;">10:27:50</div><br></p>
         <div id="w" class="weui-cells__title">学生出校通行证</div>
         <div class="weui-cells">
             <div class="weui-cell  weui-cell_example">
@@ -73,7 +75,9 @@ d.innerText="学生返校通行证"
                             var hour = t.getHours();
                             var minute = t.getMinutes();
                             var second = t.getSeconds();
-                            var nowTime = year + "/" + month + "/" + day + " " + hour + ((minute < 10) ? ":0" : ":") + minute + ((second < 10) ? ":0" : ":") + second;
+				var tm =document.getElementById("time");
+				tm.innerText=hour + ((minute < 10) ? ":0" : ":") + minute + ((second < 10) ? ":0" : ":") + second
+                            var nowTime = year + "/" + month + "/" + day + " " ;
                             document.write(nowTime);
                         </script>
                     </p>
