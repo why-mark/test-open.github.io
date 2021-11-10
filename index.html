@@ -33,9 +33,19 @@ c.innerText="返校通行证(2分钟内有效)";
 d.innerText="学生返校通行证"
 }
 }
+function color(){
+var ff =document.getElementById("back");
+var c = ff.style.background	
+if (c=="rgb(140, 2, 0)"){
+									ff.style.background="rgb(0, 128, 129)"}else if (c=="rgb(0, 128, 129)"){
+									ff.style.background="rgb(126,129, 12)"}else if (c=="rgb(126,129, 12)"){
+									ff.style.background="rgb(102, 3, 109)"}else if (c=="rgb(102, 3, 109)"){
+									ff.style.background="rgb(128, 128, 128)"}else{
+								ff.style.background="rgb(140, 2, 0)"	}
+}				
                         </script>
     <div id="bodyDiv">
-        <div id="back" style="text-align: center; background: rgb(140, 2, 0);"">
+        <div onclick="color()" id="back" style="text-align: center; background: rgb(140, 2, 0);"">
 &nbsp; <br>
 <img style="width: 85%;" onclick="changed()" id="i1" src="./出校通行证(2分钟内有效)_files/pass2.png" alt="">
 <img id="i2"  src="./出校通行证(2分钟内有效)_files/pass1.png" style="display:none;width: 85%;" alt="">
