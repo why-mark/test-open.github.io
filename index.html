@@ -43,7 +43,16 @@ if (c=="rgb(140, 2, 0)"){
 	ff.style.background="rgb(102, 3, 109)"}else if (c=="rgb(102, 3, 109)"){
 	ff.style.background="rgb(128, 128, 128)"}else if (c=="rgb(128, 128, 128)"){
 ff.style.background="rgb(140, 2, 0)"	}
-}				
+}
+                                function changeColor(){
+            var value1 = document.getElementById("range1").value;
+            var value2 = document.getElementById("range2").value;
+            var value3 = document.getElementById("range3").value;
+            var color = "rgb(" + value1 + "," + value2 + "," + value3 + ")";
+                                    console.log(color)
+            document.getElementById("back").style.backgroundColor = color;  
+        }
+                            		
                         </script>
     <div id="bodyDiv">
         <div onclick="color()" id="back" style="text-align: center; background: rgb(140, 2, 0);"">
@@ -109,6 +118,11 @@ ff.style.background="rgb(140, 2, 0)"	}
         <div class="weui-footer">
             <p>版权所有 © 辽宁大学</p>
         </div>
+		<div>
+               <input id="range1" type="range" min="0" max="255" oninput="changeColor();"><br>
+            <input id="range2" type="range" min="0" max="255" oninput="changeColor()"><br>
+            <input id="range3" type="range" min="0" max="255" oninput="changeColor()"><br>                 
+       </div>		
     </div>
 
 
