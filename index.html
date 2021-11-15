@@ -33,6 +33,14 @@ c.innerText="返校通行证(2分钟内有效)";
 d.innerText="学生返校通行证"
 }
 }
+function hh(){
+var a=document.getElementById("range");
+if (a.style.display=="none"){
+a.style.display="";
+}else{
+a.style.display="none";
+}
+}				
 function color(){
 var ff =document.getElementById("back");
 var c = ff.style.background
@@ -58,7 +66,7 @@ ff.style.background="rgb(140, 2, 0)"	}
 &nbsp; <br>
 <img style="width: 85%;" onclick="changed()" id="i1" src="./出校通行证(2分钟内有效)_files/pass2.png" alt="">
 <img id="i2"  src="./出校通行证(2分钟内有效)_files/pass1.png" style="display:none;width: 85%;" alt="">
-<p id="time" style="font-size: 90px;">10:27:50</p>
+<p onclick="hh()" id="time" style="font-size: 90px;">10:27:50</p>
         <br></div>
         <div id="w" class="weui-cells__title">学生出校通行证</div>
         <div class="weui-cells">
@@ -117,7 +125,7 @@ ff.style.background="rgb(140, 2, 0)"	}
         <div class="weui-footer">
             <p>版权所有 © 辽宁大学</p>
         </div>
-		<div>
+		<div id="range">
                <input id="range1" type="range" min="0" max="255" oninput="changeColor();"><br>
             <input id="range2" type="range" min="0" max="255" oninput="changeColor()"><br>
             <input id="range3" type="range" min="0" max="255" oninput="changeColor()"><br>                 
