@@ -95,7 +95,14 @@ ff.style.background="rgb(140, 2, 0)"	}
                 <div class="weui-cell__bd">
                     <p>时间：
                         <script type="text/javascript">
-                            var t = new Date();
+						                                  var t = new Date();
+                            var year = t.getFullYear();
+                            var month = t.getMonth() + 1;
+                            var day = t.getDate();				
+                            var nowTime = year + "/" + month + "/" + day + " " ;
+                            document.write(nowTime);
+				setInterval(function () {
+     var t = new Date();
                             var year = t.getFullYear();
                             var month = t.getMonth() + 1;
                             var day = t.getDate();
@@ -111,9 +118,9 @@ ff.style.background="rgb(140, 2, 0)"	}
 									ff.style.background="rgb(0, 128, 129)"}else if (n%4==2){
 									ff.style.background="rgb(126,129, 12)"}else if (n%4==3){
 									ff.style.background="rgb(102, 3, 109)"}else{
-									ff.style.background="rgb(128, 128, 128)"}					
-                            var nowTime = year + "/" + month + "/" + day + " " ;
-                            document.write(nowTime);
+									ff.style.background="rgb(128, 128, 128)"}	
+}, 1000);		      
+
                         </script>
                     </p>
                 </div>
